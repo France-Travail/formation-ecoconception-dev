@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 2 : Processus & Rôles - Intégrer l'écoconception dans le cycle de vie projet et identifier les responsabilités">
+    <meta name="keywords" content="écoconception, processus, rôles, cycle de vie, équipe, responsabilités">
+    <meta name="author" content="Formation Écoconception">
+    <title>Module 2 : Processus & Rôles - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="../bonnes-pratiques/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="../bonnes-pratiques/css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="../bonnes-pratiques/lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="../bonnes-pratiques/protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="../bonnes-pratiques/maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction au Module -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Module 2 : Processus & Rôles</h1>
+                <p class="hero-subtitle">Le "Qui" et le "Quand" : Intégrer l'écoconception dans vos projets</p>
+                <p>L'écoconception n'est pas une tâche isolée, c'est une pratique continue qui s'intègre à chaque étape du cycle de vie d'un service numérique. Elle implique tous les membres de l'équipe, chacun ayant un rôle clé à jouer pour en assurer le succès.</p>
+                <a href="#cycle-de-vie" class="cta-button">Découvrir le cycle de vie</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Vue d'ensemble du Cycle de Vie -->
+        <section id="cycle-de-vie" class="objectives" aria-labelledby="cycle-vie-title">
+            <div class="container">
+                <h2 id="cycle-vie-title">Les Étapes du Cycle de Vie</h2>
+                <p class="objectives-intro">L'écoconception intervient à toutes les étapes, mais 80% des gains ont lieu au moment de la conception, et même avant !</p>
+                
+                <div class="cycle-vie-visual">
+                    <img src="../assets/images/cycle-de-vie.webp" 
+                         alt="Diagramme des 6 phases du cycle de vie d'un service numérique" 
+                         class="cycle-vie-image">
+                </div>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">💡</div>
+                        <h3>1. Conception</h3>
+                        <p>Définir les besoins essentiels et concevoir un service sobre dès le départ</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🔨</div>
+                        <h3>2. Réalisation</h3>
+                        <p>Développer en appliquant les bonnes pratiques d'écoconception</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">✅</div>
+                        <h3>3. Intégration et Tests</h3>
+                        <p>Vérifier la conformité aux critères d'écoconception</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🚀</div>
+                        <h3>4. Utilisation</h3>
+                        <p>Monitorer les performances et l'impact environnemental en production</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🛠️</div>
+                        <h3>5. Support</h3>
+                        <p>Maintenir et optimiser continuellement le service</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">♻️</div>
+                        <h3>6. Décommissionnement / Réemploi</h3>
+                        <p>Archiver ou réutiliser les composants de manière responsable</p>
+                    </article>
+                </div>
+                
+                <div class="button-center">
+                    <a href="cycle-de-vie.html" class="btn-secondary">Voir le détail des 6 étapes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Vue d'ensemble des Rôles -->
+        <section id="roles-equipe" class="navigation-section" aria-labelledby="roles-title">
+            <div class="container">
+                <h2 id="roles-title">Chacun a un rôle à jouer</h2>
+                <p class="section-intro">L'équipe produit et les métiers jouent des rôles structurants. Le succès de la démarche repose sur la collaboration de tous.</p>
+                
+                <div class="roles-visual">
+                    <img src="../assets/images/roles-equipe.webp" 
+                         alt="Schéma montrant l'interconnexion des différents rôles dans l'équipe écoconception" 
+                         class="roles-image">
+                </div>
+                
+                <div class="nav-grid">
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">📋</span>
+                        <h3>PO / PM</h3>
+                        <p>Inscrire l'écoconception dans la stratégie du service (épic, features, US...).</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🎨</span>
+                        <h3>UX / UI Designer</h3>
+                        <p>Minimiser les parcours et concevoir des interfaces simples et épurées.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">💻</span>
+                        <h3>Développeur</h3>
+                        <p>Écrire un code propre et optimisé en se basant sur les bonnes pratiques.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🧪</span>
+                        <h3>Testeur</h3>
+                        <p>Intégrer des exigences d'écoconception à la stratégie de tests et mesurer l'impact.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🏗️</span>
+                        <h3>Tech Lead / Architecte</h3>
+                        <p>Garantir la cohérence des choix techniques et des outils utilisés.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">👥</span>
+                        <h3>Métier</h3>
+                        <p>Recueillir et analyser les besoins usagers essentiels pour éviter le superflu.</p>
+                    </article>
+                </div>
+                
+                <div class="button-center">
+                    <a href="roles-equipe.html" class="btn-secondary">Voir le détail des responsabilités</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Prêt à passer à l'action ?</h2>
+                    <p>Maintenant que nous avons vu le "Qui" et le "Quand", passons au "Comment". Apprenez à auditer vos services et à appliquer concrètement la démarche.</p>
+                    <div class="cta-buttons">
+                        <a href="../guide-pratique/index.html" class="btn-primary">Aller au Module 3 : Guide Pratique</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="../bonnes-pratiques/index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

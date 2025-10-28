@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bonne Pratique : Limiter les Carrousels Automatiques - Impact et solutions pour une meilleure performance">
+    <meta name="keywords" content="écoconception, carrousels, autoplay, performance, accessibilité, UX">
+    <meta name="author" content="Formation Écoconception">
+    <title>Limiter les Carrousels - Bonnes Pratiques Écoconception</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="limiter-carrousels.html" aria-current="page">Limiter les carrousels</a></li>
+                            <li><a href="lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à la Pratique -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Bonne Pratique : Limiter les Carrousels Automatiques</h1>
+                <p class="hero-subtitle">Arrêter les animations inutiles et redonner le contrôle à l'utilisateur</p>
+                <p>Les carrousels qui défilent automatiquement sont une pratique courante, mais ils ont un impact négatif significatif. Ils sont lourds, consomment des ressources processeur et sont souvent source de frustration et d'inaccessibilité pour les utilisateurs.</p>
+                <a href="#pourquoi" class="cta-button">Pourquoi est-ce un problème ?</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Pourquoi ? L'Impact -->
+        <section id="pourquoi" class="objectives" aria-labelledby="impact-title">
+            <div class="container">
+                <h2 id="impact-title">L'impact négatif des carrousels automatiques</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">⚖️</div>
+                        <h3>Poids accru (JS/CSS)</h3>
+                        <p>Un carrousel alourdit le poids des pages par la présence de CSS et de JavaScript dédiés nécessaires à son fonctionnement et ses animations.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🔋</div>
+                        <h3>Consommation Processeur</h3>
+                        <p>Les animations constantes demandent plus de ressources processeur (CPU), ce qui décharge plus rapidement la batterie des appareils mobiles.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">👥</div>
+                        <h3>Mauvaise Accessibilité</h3>
+                        <p>Le contenu en mouvement est difficile à lire, en particulier pour les personnes ayant des troubles cognitifs. De plus, la plupart des utilisateurs ignorent activement le contenu des carrousels.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Comment ? La Mise en Œuvre -->
+        <section id="mise-en-oeuvre" class="navigation-section" aria-labelledby="implementation-title">
+            <div class="container">
+                <h2 id="implementation-title">Comment faire ? Les solutions (par ordre de priorité)</h2>
+                
+                <div class="nav-grid">
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🥇</span>
+                        <h3>1. Supprimer le carrousel</h3>
+                        <p>C'est la solution la plus efficace. Analysez si tout le contenu est vraiment nécessaire. Si un seul slide est important, affichez-le de manière statique.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🥈</span>
+                        <h3>2. Désactiver l'Autoplay</h3>
+                        <p>Supprimez la lecture automatique. Le carrousel devient statique et l'utilisateur choisit de faire défiler le contenu via des flèches ou des points de navigation.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🥉</span>
+                        <h3>3. Limiter le contenu</h3>
+                        <p>Si un carrousel doit être conservé, limitez le nombre d'écrans (slides) présents et ne déclenchez le défilement que suite à une action explicite de l'utilisateur.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">⏯️</span>
+                        <h3>Cas des Médias : Désactiver l'Autoplay</h3>
+                        <p>Le même principe s'applique aux vidéos et aux audios. N'utilisez pas l'attribut <code>autoplay</code>. L'activité de ces composants doit être lancée à la demande de l'utilisateur.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pratique Suivante</h2>
+                    <p>Une autre technique essentielle pour optimiser le chargement des pages est de ne charger que ce qui est visible. Découvrons le "Lazy Loading".</p>
+                    <div class="cta-buttons">
+                        <a href="lazy-loading.html" class="btn-primary">Aller à la fiche : Lazy Loading</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

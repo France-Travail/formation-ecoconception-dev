@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bonne Pratique : Implémenter le Lazy Loading - Différer le chargement des ressources non visibles">
+    <meta name="keywords" content="écoconception, lazy loading, chargement différé, performance, images, iframes">
+    <meta name="author" content="Formation Écoconception">
+    <title>Lazy Loading - Bonnes Pratiques Écoconception</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="lazy-loading.html" aria-current="page">Lazy Loading</a></li>
+                            <li><a href="optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à la Pratique -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Bonne Pratique : Implémenter le Lazy Loading</h1>
+                <p class="hero-subtitle">Différer le chargement des ressources non visibles</p>
+                <p>Le "Lazy Loading" (chargement différé) est une technique fondamentale pour améliorer la performance. Elle consiste à ne charger les ressources (images, iframes) que lorsqu'elles sont sur le point d'entrer dans la zone visible de l'utilisateur.</p>
+                <a href="#pourquoi" class="cta-button">Pourquoi est-ce efficace ?</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Pourquoi ? L'Impact -->
+        <section id="pourquoi" class="objectives" aria-labelledby="impact-title">
+            <div class="container">
+                <h2 id="impact-title">Les bénéfices du chargement différé</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">⚡</div>
+                        <h3>Temps de chargement réduit</h3>
+                        <p>La page se charge plus vite car le navigateur télécharge uniquement les ressources critiques (visibles). Le poids initial de la page est drastiquement réduit.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🌱</div>
+                        <h3>Économie de bande passante</h3>
+                        <p>Cela permet de ne charger les images que lorsque cela est nécessaire. Si l'utilisateur ne fait pas défiler la page, les ressources inutiles ne sont jamais téléchargées.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🔋</div>
+                        <h3>Moins de puissance de traitement</h3>
+                        <p>En évitant de charger et de décoder des images inutiles au démarrage, on économise de la puissance de traitement (CPU), ce qui est bénéfique pour l'autonomie des appareils mobiles.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Comment ? La Mise en Œuvre -->
+        <section id="mise-en-oeuvre" class="navigation-section" aria-labelledby="implementation-title">
+            <div class="container">
+                <h2 id="implementation-title">Comment Mettre en Œuvre (Méthode Native)</h2>
+                
+                <div class="test-content">
+                    <p style="margin-bottom: 2rem; font-size: 1.05rem; color: #555;">Le "lazy loading" consiste à charger et afficher les images ou iframes situées sous la ligne de flottaison lorsque celles-ci entrent dans l'écran. La méthode la plus simple et recommandée aujourd'hui est d'utiliser l'attribut HTML natif.</p>
+                    
+                    <h3>Ajouter l'attribut <code>loading="lazy"</code></h3>
+                    <p>Il suffit d'ajouter l'attribut <code>loading="lazy"</code> sur les éléments <code>&lt;img&gt;</code> ou <code>&lt;iframe&gt;</code> que vous souhaitez charger différemment. Le navigateur s'occupe du reste.</p>
+                    
+                    <blockquote class="code-block">
+                        <pre><code>&lt;!-- Pour les images --&gt;
+&lt;img src="image-lourde.jpg" alt="description" loading="lazy" width="600" height="400"&gt;
+
+&lt;!-- Pour les iframes (ex: vidéo) --&gt;
+&lt;iframe src="integration-video.html" title="Titre vidéo" loading="lazy" width="560" height="315"&gt;&lt;/iframe&gt;</code></pre>
+                    </blockquote>
+                    
+                    <h4 style="margin-top: 2rem; color: #2c3e50; font-size: 1.2rem;">Remarque importante</h4>
+                    <p>N'appliquez pas <code>loading="lazy"</code> aux images situées "au-dessus de la ligne de flottaison" (c'est-à-dire visibles dès le chargement de la page, comme un logo ou une image "hero"). Cela pourrait <em>ralentir</em> leur affichage. Cette technique est réservée aux contenus non visibles immédiatement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pratique Suivante</h2>
+                    <p>Les images sont optimisées. Intéressons-nous maintenant à un autre type d'asset qui peut alourdir vos pages : les polices de caractères.</p>
+                    <div class="cta-buttons">
+                        <a href="optimiser-polices.html" class="btn-primary">Aller à la fiche : Optimiser les Polices</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

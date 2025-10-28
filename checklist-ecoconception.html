@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checklist d'Écoconception - Outil de synthèse pour évaluer vos projets numériques">
+    <meta name="keywords" content="écoconception, checklist, bonnes pratiques, évaluation, audit, front-end, back-end">
+    <meta name="author" content="Formation Écoconception">
+    <title>Checklist Écoconception - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="bonnes-pratiques/index.html">Vue d'ensemble</a></li>
+                            <li><a href="bonnes-pratiques/optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="bonnes-pratiques/css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="bonnes-pratiques/limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="bonnes-pratiques/lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="bonnes-pratiques/optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="bonnes-pratiques/protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="bonnes-pratiques/optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="bonnes-pratiques/maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="bonnes-pratiques/limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à la Checklist -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Checklist d'Écoconception</h1>
+                <p class="hero-subtitle">L'outil de synthèse pour vos projets</p>
+                <p>Utilisez cette checklist comme un guide pratique pour évaluer vos services numériques. Elle regroupe les bonnes pratiques essentielles à appliquer lors des phases de conception, de développement et de test. C'est la base de l'évaluation de la maturité (le "Radar").</p>
+                <a href="#checklist" class="cta-button">Commencer l'évaluation</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : La Checklist Pratique -->
+        <section id="checklist" class="navigation-section" aria-labelledby="checklist-title">
+            <div class="container">
+                <h2 id="checklist-title">Checklist des Bonnes Pratiques</h2>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.05rem; color: #555;">Passez en revue chaque point avec votre équipe et cochez ce qui est déjà appliqué sur votre périmètre.</p>
+                
+                <!-- Catégorie : Front-end -->
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: #2c3e50; font-size: 1.75rem;">Catégorie : Front-end</h3>
+                <div class="table-wrapper">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Bonne Pratique</th>
+                                <th>Fait ? (OUI/NON)</th>
+                                <th>Fiche Pratique Détaillée</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Utiliser un mécanisme de lazy loading</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/lazy-loading.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Fournir des formats d'image optimisés (AVIF, WebP)</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-images.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Proposer plusieurs tailles d'images (balise picture)</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-images.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Optimiser (compresser, minifier) les images</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-images.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Limiter le nombre de webfonts utilisées</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-polices.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Utiliser les formats de police WOFF2 ou WOFF</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-polices.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Minimiser le nombre d'animations javascript et CSS</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/limiter-animations.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Désactiver l'autoplay des vidéos</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/limiter-carrousels.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Désactiver l'autoplay des audios</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/limiter-carrousels.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Limiter (ou supprimer) les carrousels automatiques</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/limiter-carrousels.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Préférer le CSS aux images pour l'interface</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/css-vs-images.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Concaténer et minifier les fichiers (CSS, JS)</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-code.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Supprimer le code inutilisé (CSS, JS)</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/optimiser-code.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Maîtriser la taille du DOM (ex: &lt; 1500 éléments)</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/maitriser-dom.html">Voir la fiche</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Catégorie : Back-end & Architecture -->
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem; color: #2c3e50; font-size: 1.75rem;">Catégorie : Back-end & Architecture</h3>
+                <div class="table-wrapper">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Bonne Pratique</th>
+                                <th>Fait ? (OUI/NON)</th>
+                                <th>Fiche Pratique Détaillée</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Utiliser le protocole HTTP/2 ou HTTP/3</td>
+                                <td></td>
+                                <td><a href="bonnes-pratiques/protocole-http.html">Voir la fiche</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mettre en place une stratégie de cache serveur efficace</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Optimiser les requêtes d'accès aux données (limiter les jointures, N+1...)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Limiter les données transmises (pagination, champs API ciblés)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Optimiser les flux HTTP (compression Gzip/Brotli)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pour aller plus loin</h2>
+                    <p>Cette checklist est un excellent point de départ. Pour approfondir le sujet, consultez la page des ressources qui regroupe des guides externes, des livres blancs et des outils.</p>
+                    <div class="cta-buttons">
+                        <a href="ressources.html" class="btn-primary">Aller à la page Ressources</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="bonnes-pratiques/index.html">Bonnes Pratiques</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

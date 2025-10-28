@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bonne Pratique : Optimiser le Code CSS/JS - Supprimer l'inutile, concaténer et minifier">
+    <meta name="keywords" content="écoconception, optimisation, code, CSS, JavaScript, minification, concaténation, performance">
+    <meta name="author" content="Formation Écoconception">
+    <title>Optimiser le Code - Bonnes Pratiques Écoconception</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="optimiser-code.html" aria-current="page">Optimiser le code</a></li>
+                            <li><a href="maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à la Pratique -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Bonne Pratique : Optimiser le Code (CSS/JS)</h1>
+                <p class="hero-subtitle">Supprimer l'inutile, concaténer et minifier</p>
+                <p>Le code de vos fichiers CSS et JavaScript a un impact direct sur la performance et l'empreinte environnementale. Chaque ligne de code inutile consomme de la bande passante, du temps de traitement et de l'énergie. Cette fiche couvre les 3 actions clés pour alléger votre code.</p>
+                <a href="#pourquoi" class="cta-button">Pourquoi est-ce important ?</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Pourquoi ? L'Impact -->
+        <section id="pourquoi" class="objectives" aria-labelledby="impact-title">
+            <div class="container">
+                <h2 id="impact-title">Les bénéfices d'un code optimisé</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🌱</div>
+                        <h3>Impact environnemental réduit</h3>
+                        <p>Du code inutilisé (code mort) entraîne des téléchargements et des traitements superflus, ce qui génère une pollution numérique évitable.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🛠️</div>
+                        <h3>Maintenance améliorée</h3>
+                        <p>Moins de code signifie une application plus simple à maintenir, avec moins de bugs potentiels et une meilleure performance globale.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">⚡</div>
+                        <h3>Performance accrue</h3>
+                        <p>Minifier le code réduit le poids des fichiers. Concaténer les fichiers réduit le nombre de requêtes HTTP, diminuant ainsi le temps de chargement.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Comment ? La Mise en Œuvre -->
+        <section id="mise-en-oeuvre" class="navigation-section" aria-labelledby="implementation-title">
+            <div class="container">
+                <h2 id="implementation-title">Comment Mettre en Œuvre ? (3 Actions)</h2>
+                
+                <div class="nav-grid">
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">1️⃣</span>
+                        <h3>Action 1 : Supprimer le code inutilisé</h3>
+                        <p>En tant que développeur, utilisez le panneau <strong>"Couverture" (Coverage)</strong> des DevTools de Chrome pour vous aider à localiser le code CSS et JavaScript inutilisé, ligne par ligne.</p>
+                        <p>Des outils comme <code>UnCSS</code> ou <code>PurifyCSS</code> peuvent aussi automatiser la suppression du CSS inutilisé en analysant vos fichiers HTML.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">2️⃣</span>
+                        <h3>Action 2 : Concaténer les fichiers</h3>
+                        <p>La combinaison de plusieurs fichiers (ex: toutes vos feuilles de style CSS) en un seul permet de <strong>réduire le nombre de requêtes HTTP</strong> nécessaires au chargement de la page.</p>
+                        <p>Des outils modernes (bundlers) comme <strong>Webpack</strong> permettent d'automatiser cette fusion lors de la phase de "build" de votre application.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">3️⃣</span>
+                        <h3>Action 3 : Minifier le code</h3>
+                        <p>Minifier un code consiste à <strong>réduire sa taille</strong> au maximum tout en conservant son fonctionnement. Cela inclut :</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;">Supprimer les commentaires.</li>
+                            <li style="margin-bottom: 0.5rem;">Supprimer les espaces, tabulations et sauts de ligne.</li>
+                            <li>Raccourcir les noms de variables et de fonctions.</li>
+                        </ul>
+                        <p>Des outils comme <code>Uglify-js</code> ou <code>JSCompress.com</code> peuvent réaliser cette opération automatiquement.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pratique Suivante</h2>
+                    <p>Le code de vos fichiers est optimisé. Intéressons-nous maintenant au résultat final dans le navigateur : la structure de la page. Voyons comment maîtriser la taille du DOM.</p>
+                    <div class="cta-buttons">
+                        <a href="maitriser-dom.html" class="btn-primary">Aller à la fiche : Maîtriser la Taille du DOM</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

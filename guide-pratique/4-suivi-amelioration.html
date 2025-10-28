@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 3.4 : Suivi & Amélioration Continue - Valider les gains, élargir la démarche et suivre les KPI">
+    <meta name="keywords" content="écoconception, suivi, amélioration continue, KPI, validation, gains, monitoring">
+    <meta name="author" content="Formation Écoconception">
+    <title>Module 3.4 : Suivi & Amélioration Continue - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="../bonnes-pratiques/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="../bonnes-pratiques/css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="../bonnes-pratiques/lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="../bonnes-pratiques/protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="../bonnes-pratiques/maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction au Suivi -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Module 3.4 : Suivi & Amélioration Continue</h1>
+                <p class="hero-subtitle">Valider les gains, élargir la démarche et suivre les KPI</p>
+                <p>Une fois les actions de correction appliquées, le travail n'est pas terminé. Il est crucial de mesurer à nouveau pour valider l'impact de vos efforts, d'étendre la démarche au reste du service, et de mettre en place un suivi pour garantir que le service reste sobre dans la durée.</p>
+                <a href="#etape4" class="cta-button">Valider les gains (Étape 4)</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Étape 4 - Audit Final -->
+        <section id="etape4" class="objectives" aria-labelledby="etape4-title">
+            <div class="container">
+                <h2 id="etape4-title">Étape 4 : Audit Final et Validation des Gains</h2>
+                <p class="objectives-intro">L'objectif de cette phase est de re-analyser le service numérique une fois les améliorations réalisées. La finalité est de constater et de quantifier la baisse de l'empreinte environnementale du service. Pour cela, on utilise les mêmes outils que lors de l'audit initial (GreenIT Analysis, Console...).</p>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card validation-card">
+                        <div class="card-icon" aria-hidden="true">✅</div>
+                        <h3>Cas Pratique : Valider les Gains</h3>
+                        <p>Relancez l'analyse (par exemple avec GreenIT Analysis) sur le service corrigé.</p>
+                        <p style="margin-top: 1rem;">Comparez l'<strong>État Initial</strong> et l'<strong>État Final</strong> et posez-vous les questions suivantes :</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Quel est le nouveau score (Poids, Requêtes, DOM) ?</li>
+                            <li>Quel est le nouveau GES (gaz à effet de serre) ?</li>
+                            <li>Quel est l'équivalent carbone économisé ?</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Vous devez pouvoir chiffrer l'amélioration obtenue.</strong></p>
+                        
+                        <div class="example-comparison">
+                            <div class="comparison-item">
+                                <h4>Exemple d'amélioration</h4>
+                                <div class="comparison-metrics">
+                                    <div class="metric-before-after">
+                                        <span class="metric-label">Poids de la page</span>
+                                        <div class="metric-values">
+                                            <span class="before">Avant : 1446 Ko</span>
+                                            <span class="arrow">→</span>
+                                            <span class="after">Après : 890 Ko</span>
+                                        </div>
+                                        <span class="metric-gain">Gain : -38%</span>
+                                    </div>
+                                    <div class="metric-before-after">
+                                        <span class="metric-label">Nombre de requêtes</span>
+                                        <div class="metric-values">
+                                            <span class="before">Avant : 30</span>
+                                            <span class="arrow">→</span>
+                                            <span class="after">Après : 18</span>
+                                        </div>
+                                        <span class="metric-gain">Gain : -40%</span>
+                                    </div>
+                                    <div class="metric-before-after">
+                                        <span class="metric-label">Éléments du DOM</span>
+                                        <div class="metric-values">
+                                            <span class="before">Avant : 650</span>
+                                            <span class="arrow">→</span>
+                                            <span class="after">Après : 420</span>
+                                        </div>
+                                        <span class="metric-gain">Gain : -35%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Étape 5 - Élargissement -->
+        <section id="etape5" class="navigation-section" aria-labelledby="etape5-title">
+            <div class="container">
+                <h2 id="etape5-title">Étape 5 : Élargissement du Périmètre</h2>
+                <p class="section-intro">Vos premiers gains sont validés ! Il ne faut pas s'arrêter là. Il est temps d'appliquer la même méthodologie aux autres parties de votre service.</p>
+                
+                <div class="enlargement-content">
+                    <div class="enlargement-visual">
+                        <div class="step-flow">
+                            <div class="flow-step">
+                                <span class="flow-number">1</span>
+                                <span class="flow-label">Périmètre initial</span>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <span class="flow-number">2</span>
+                                <span class="flow-label">Gains validés</span>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step highlight">
+                                <span class="flow-number">3</span>
+                                <span class="flow-label">Élargissement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="enlargement-details">
+                        <h3>Itérer la démarche</h3>
+                        <p>Par la suite, vous pouvez aller sur les autres pages du service (celles moins visitées, ou d'autres parcours utilisateurs) et réitérer les étapes 1 à 4. C'est ce qu'on appelle l'élargissement de la démarche. L'objectif est de continuer jusqu'à diminuer le poids et le DOM de l'ensemble du service.</p>
+                        
+                        <div class="iteration-steps">
+                            <div class="iteration-item">
+                                <span class="iteration-icon">🔄</span>
+                                <div>
+                                    <h4>Nouvelles pages</h4>
+                                    <p>Sélectionnez d'autres pages à fort trafic ou d'autres parcours critiques.</p>
+                                </div>
+                            </div>
+                            <div class="iteration-item">
+                                <span class="iteration-icon">📊</span>
+                                <div>
+                                    <h4>Même méthodologie</h4>
+                                    <p>Appliquez les étapes 1 à 4 : cadrage, audit, correction, validation.</p>
+                                </div>
+                            </div>
+                            <div class="iteration-item">
+                                <span class="iteration-icon">🎯</span>
+                                <div>
+                                    <h4>Objectif global</h4>
+                                    <p>Étendre progressivement la démarche à l'ensemble du service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Étape 6 - Suivi des KPI -->
+        <section id="etape6" class="objectives" aria-labelledby="etape6-title">
+            <div class="container">
+                <h2 id="etape6-title">Étape 6 : Suivi des KPI dans la durée</h2>
+                <p class="objectives-intro">Suivre l'évolution de votre service est vital pour savoir comment l'améliorer et s'assurer qu'il reste éco-conçu au fil des nouvelles fonctionnalités. Ce suivi se fait via des indicateurs (KPI) définis avec l'équipe produit.</p>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">📈</div>
+                        <h3>Quels indicateurs suivre ?</h3>
+                        <p>Pour une page ou un périmètre donné, vous devez suivre :</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Son <strong>poids</strong> total</li>
+                            <li>La taille de son <strong>DOM</strong></li>
+                            <li>Le <strong>nombre de requêtes</strong></li>
+                            <li>Son <strong>empreinte environnementale</strong> (Eco-score ou GES)</li>
+                            <li>Le nombre de <strong>bonnes pratiques</strong> appliquées</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Ces indicateurs vous permettent de mesurer objectivement l'évolution de votre service dans le temps.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🔄</div>
+                        <h3>Que faire de ces indicateurs ?</h3>
+                        <p>Au cours du temps, vous devez :</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li><strong>Historiser</strong> les nouveaux indicateurs et l'empreinte environnementale obtenue.</li>
+                            <li><strong>Mettre à jour</strong> le radar de maturité de l'équipe pour refléter les nouvelles bonnes pratiques appliquées.</li>
+                            <li><strong>Piloter</strong> ces indicateurs via un reporting pour suivre l'évolution de l'empreinte au regard des bonnes pratiques appliquées.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">Un suivi régulier (mensuel ou trimestriel) permet de détecter rapidement les régressions et de maintenir la qualité environnementale du service.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 : Récapitulatif du parcours -->
+        <section class="stats-section" aria-labelledby="recap-title">
+            <div class="container">
+                <h2 id="recap-title">Le cycle complet de la démarche</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">✅</div>
+                        <h3 class="stat-label">Validation</h3>
+                        <p>Mesurez à nouveau après les corrections pour quantifier précisément les gains obtenus.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">🔄</div>
+                        <h3 class="stat-label">Élargissement</h3>
+                        <p>Appliquez la démarche à d'autres pages et parcours pour maximiser l'impact global.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">📊</div>
+                        <h3 class="stat-label">Suivi continu</h3>
+                        <p>Mettez en place des KPI et un monitoring régulier pour pérenniser les résultats.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Prêt à découvrir toutes les Bonnes Pratiques ?</h2>
+                    <p>Vous maîtrisez maintenant la méthodologie complète (le "Comment"). Il est temps de plonger dans la boîte à outils technique (le "Quoi"). Explorez le catalogue complet des actions d'optimisation.</p>
+                    <div class="cta-buttons">
+                        <a href="../bonnes-pratiques/index.html" class="btn-primary">Aller au Module 4 : Les Bonnes Pratiques</a>
+                        <a href="index.html" class="btn-secondary">Retour au Guide Pratique</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="index.html">Guide Pratique</a></li>
+                        <li><a href="../bonnes-pratiques/index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

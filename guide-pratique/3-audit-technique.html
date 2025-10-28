@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 3.3 : Audit Technique & Analyse - De la mesure à l'action, identifier et prioriser les optimisations">
+    <meta name="keywords" content="écoconception, audit technique, analyse, diagnostic, priorisation, optimisation">
+    <meta name="author" content="Formation Écoconception">
+    <title>Module 3.3 : Audit Technique & Analyse - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="../bonnes-pratiques/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="../bonnes-pratiques/css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="../bonnes-pratiques/lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="../bonnes-pratiques/protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="../bonnes-pratiques/maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à l'Audit -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Module 3.3 : Audit Technique & Analyse</h1>
+                <p class="hero-subtitle">De la mesure à l'action : identifier et prioriser les optimisations</p>
+                <p>C'est l'étape où nous passons de la théorie à la pratique. Nous allons utiliser les outils de diagnostic pour collecter des données objectives sur notre service, analyser ces données pour trouver les goulots d'étranglement, et prioriser les corrections.</p>
+                <a href="#processus-audit" class="cta-button">Voir le processus d'audit</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Le Processus de Diagnostic -->
+        <section id="processus-audit" class="objectives" aria-labelledby="processus-title">
+            <div class="container">
+                <h2 id="processus-title">Le Processus de Diagnostic en 3 Étapes</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🔬</div>
+                        <h3>1. Analyse Macro</h3>
+                        <p>Utiliser <strong>GreenIT Analysis</strong> pour obtenir un écoindex global et les grands indicateurs (Poids, Requêtes, DOM). C'est notre état des lieux initial.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Score écoindex (A à G)</li>
+                            <li>Poids total de la page</li>
+                            <li>Nombre de requêtes HTTP</li>
+                            <li>Nombre d'éléments du DOM</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">💡</div>
+                        <h3>2. Audit de Performance</h3>
+                        <p>Lancer un audit <strong>Lighthouse</strong> pour identifier les problèmes de performance qui sont souvent liés à un impact environnemental (ex: JavaScript lourd, images non optimisées).</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Score de performance</li>
+                            <li>Recommandations d'optimisation</li>
+                            <li>Identification des ressources bloquantes</li>
+                            <li>Opportunités d'amélioration</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">📊</div>
+                        <h3>3. Analyse Détaillée (Console)</h3>
+                        <p>Utiliser l'<strong>onglet 'Réseau'</strong> de la console (F12) pour analyser en détail <em>quelles</em> ressources (JS, CSS, images) sont les plus lourdes et les plus nombreuses.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Détail par type de ressource</li>
+                            <li>Poids individuel de chaque fichier</li>
+                            <li>Cascade de chargement (Waterfall)</li>
+                            <li>Identification des ressources critiques</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Analyser les Résultats -->
+        <section id="analyse-resultats" class="navigation-section" aria-labelledby="analyse-title">
+            <div class="container">
+                <h2 id="analyse-title">Analyser les Résultats : Comprendre d'où vient le poids</h2>
+                <p class="section-intro">L'analyse macro ne suffit pas. Pour agir efficacement, nous devons comprendre la <em>composition</em> de la page. L'onglet 'Réseau' de la console est votre meilleur allié. L'objectif est de remplir un tableau d'audit pour identifier les coupables.</p>
+                
+                <div class="audit-analysis">
+                    <h3>Exemple de Tableau d'Audit</h3>
+                    <p>Voici un exemple de tableau que vous devriez remplir après avoir analysé l'onglet Réseau de votre page :</p>
+                    
+                    <div class="table-wrapper">
+                        <table class="audit-table">
+                            <thead>
+                                <tr>
+                                    <th>Type de Ressource</th>
+                                    <th>Nb de Requêtes (Exemple)</th>
+                                    <th>Poids (Exemple)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>1</td>
+                                    <td>21.6 Ko</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>6</td>
+                                    <td>361 Ko</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td>JavaScript</td>
+                                    <td>10</td>
+                                    <td>596 Ko</td>
+                                </tr>
+                                <tr>
+                                    <td>Polices</td>
+                                    <td>4</td>
+                                    <td>35 Ko</td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td>Images</td>
+                                    <td>6</td>
+                                    <td>419 Ko</td>
+                                </tr>
+                                <tr>
+                                    <td>XHR</td>
+                                    <td>1</td>
+                                    <td>13 Ko</td>
+                                </tr>
+                                <tr>
+                                    <td>Autres</td>
+                                    <td>1</td>
+                                    <td>0.4 Ko</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTAL</strong></td>
+                                    <td><strong>30</strong></td>
+                                    <td><strong>~1446 Ko</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="interpretation">
+                        <h4>Interprétation de l'exemple</h4>
+                        <p>Dans cet exemple fictif, on constate deux problèmes majeurs :</p>
+                        <ul>
+                            <li>Le <strong>JavaScript</strong> contribue de manière prépondérante au poids de la page (41% du poids total) et au nombre de requêtes (10 requêtes soit 33%). Il faudra investiguer (code inutile, librairies lourdes, possibilité de minification...).</li>
+                            <li>Les <strong>images</strong> représentent également une part importante du poids (29% du poids total). Une action sur leur format (AVIF/WebP) et leur compression aura un impact direct sur les performances et l'empreinte environnementale.</li>
+                        </ul>
+                        <p class="interpretation-conclusion">Ces deux catégories de ressources doivent être les priorités absolues pour l'optimisation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Mise en Conformité et Priorisation -->
+        <section id="mise-en-conformite" class="objectives" aria-labelledby="prioriser-title">
+            <div class="container">
+                <h2 id="prioriser-title">Étape 3 : Mise en Conformité et Priorisation</h2>
+                <p class="objectives-intro">Une fois l'audit terminé, l'objectif est d'améliorer le service. Il faut prioriser les actions qui auront le plus d'impact.</p>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">✅</div>
+                        <h3>1. Identifier les actions</h3>
+                        <p>Au regard de votre diagnostic (le tableau ci-dessus), regardez les <strong>Bonnes Pratiques Essentielles</strong> qui s'appliquent.</p>
+                        <p style="margin-top: 1rem;"><strong>Exemples d'actions selon le diagnostic :</strong></p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>Si les images sont lourdes → "Fournir des formats d'images optimisés"</li>
+                            <li>Si le JavaScript est lourd → "Éliminer le code mort" et "Minifier les fichiers"</li>
+                            <li>Si le nombre de requêtes est élevé → "Grouper les fichiers CSS/JS"</li>
+                            <li>Si le DOM est trop grand → "Limiter le nombre d'éléments"</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">📚</div>
+                        <h3>2. Consulter les fiches pratiques</h3>
+                        <p>Pour chaque action priorisée, référez-vous au guide d'application (ou aux fiches pratiques de ce site) pour comprendre <em>comment</em> la mettre en œuvre opérationnellement.</p>
+                        <p style="margin-top: 1rem;">Chaque fiche pratique contient :</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>L'objectif de la bonne pratique</li>
+                            <li>Le bénéfice attendu</li>
+                            <li>Les étapes de mise en œuvre</li>
+                            <li>Des exemples de code</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><a href="../bonnes-pratiques/index.html" class="card-link">Voir le catalogue des Bonnes Pratiques <span aria-hidden="true">→</span></a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 : Points clés du processus d'audit -->
+        <section class="stats-section" aria-labelledby="recap-audit-title">
+            <div class="container">
+                <h2 id="recap-audit-title">Les clés d'un audit réussi</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">📊</div>
+                        <h3 class="stat-label">Mesurer objectivement</h3>
+                        <p>Utilisez les 3 outils complémentaires pour obtenir une vision complète et factuelle de l'état de votre service.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">🔍</div>
+                        <h3 class="stat-label">Analyser en détail</h3>
+                        <p>Le tableau d'audit permet d'identifier précisément les ressources problématiques et de quantifier leur impact.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">🎯</div>
+                        <h3 class="stat-label">Prioriser les actions</h3>
+                        <p>Concentrez vos efforts sur les optimisations qui auront le plus fort impact sur la performance et l'environnement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Prêt à valider vos gains ?</h2>
+                    <p>Après avoir appliqué les correctifs, l'étape suivante est cruciale : mesurer à nouveau pour valider l'amélioration et apprendre à mettre en place un suivi dans la durée.</p>
+                    <div class="cta-buttons">
+                        <a href="4-suivi-amelioration.html" class="btn-primary">Aller au Module 3.4 : Suivi & Amélioration Continue</a>
+                        <a href="index.html" class="btn-secondary">Retour au Guide Pratique</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="index.html">Guide Pratique</a></li>
+                        <li><a href="../bonnes-pratiques/index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

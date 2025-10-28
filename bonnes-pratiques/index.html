@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 4 : Les Bonnes Pratiques Clés - Catalogue des optimisations techniques pour l'écoconception">
+    <meta name="keywords" content="écoconception, bonnes pratiques, optimisation, images, CSS, lazy loading, performance">
+    <meta name="author" content="Formation Écoconception">
+    <title>Module 4 : Les Bonnes Pratiques - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="index.html" aria-current="page">Vue d'ensemble</a></li>
+                            <li><a href="optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction au Module -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Module 4 : Les Bonnes Pratiques Clés</h1>
+                <p class="hero-subtitle">Le "Quoi" : Le catalogue des optimisations techniques</p>
+                <p>Vous maîtrisez la méthode, plongez maintenant dans les actions concrètes. Ce module est une boîte à outils de fiches pratiques pour optimiser vos services numériques. Explorez chaque fiche pour apprendre <em>comment</em> implémenter chaque optimisation.</p>
+                <a href="#pratiques" class="cta-button">Explorer les fiches pratiques</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Catalogue des Bonnes Pratiques -->
+        <section id="pratiques" class="navigation-section" aria-labelledby="pratiques-title">
+            <div class="container">
+                <h2 id="pratiques-title">Catalogue des Fiches Pratiques</h2>
+                
+                <div class="nav-grid">
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🖼️</span>
+                        <h3><a href="optimiser-images.html">Optimiser les Images</a></h3>
+                        <p>Choisir le bon format (AVIF, WebP), compresser et utiliser la balise <code>&lt;picture&gt;</code> pour réduire drastiquement le poids des pages.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🎨</span>
+                        <h3><a href="css-vs-images.html">Préférer le CSS aux Images</a></h3>
+                        <p>Remplacer les images d'interface (boutons, fonds) par du code CSS pour réduire le poids et le nombre de requêtes.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🎠</span>
+                        <h3><a href="limiter-carrousels.html">Limiter les Carrousels</a></h3>
+                        <p>Comprendre l'impact négatif des carrousels automatiques (poids, CPU) et découvrir les alternatives plus sobres.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">⏳</span>
+                        <h3><a href="lazy-loading.html">Implémenter le Lazy Loading</a></h3>
+                        <p>Charger les images et iframes uniquement lorsqu'elles entrent dans l'écran de l'utilisateur (<code>loading="lazy"</code>).</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🔤</span>
+                        <h3><a href="optimiser-polices.html">Optimiser les Polices</a></h3>
+                        <p>Utiliser les formats WOFF/WOFF2, limiter le nombre de polices et de variantes pour alléger le chargement.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">⚡</span>
+                        <h3><a href="protocole-http.html">Utiliser HTTP/2 ou HTTP/3</a></h3>
+                        <p>Profiter des gains de performance et de la réduction de bande passante offerts par les protocoles HTTP modernes.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">⚙️</span>
+                        <h3><a href="optimiser-code.html">Optimiser le Code (CSS/JS)</a></h3>
+                        <p>Concaténer, minifier et supprimer le code inutilisé pour alléger vos assets et réduire les traitements inutiles.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🏛️</span>
+                        <h3><a href="maitriser-dom.html">Maîtriser la Taille du DOM</a></h3>
+                        <p>Maintenir une structure HTML simple (moins de 1500 éléments) pour réduire l'usage CPU et RAM du navigateur.</p>
+                    </article>
+                    
+                    <article class="nav-card">
+                        <span class="icon" aria-hidden="true">🎬</span>
+                        <h3><a href="limiter-animations.html">Limiter les Animations</a></h3>
+                        <p>Utiliser les animations CSS avec parcimonie et privilégier les propriétés performantes pour réduire la consommation énergétique.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Prêt à tout synthétiser ?</h2>
+                    <p>Vous avez maintenant exploré le "Pourquoi", le "Qui", le "Quand", le "Comment" et le "Quoi". Consultez la checklist complète pour valider vos acquis ou explorez nos ressources complémentaires.</p>
+                    <div class="cta-buttons">
+                        <a href="../checklist-ecoconception.html" class="btn-primary">Voir la Checklist Complète</a>
+                        <a href="../ressources.html" class="btn-secondary">Voir les Ressources</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

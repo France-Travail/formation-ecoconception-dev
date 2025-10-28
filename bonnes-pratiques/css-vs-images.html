@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bonne Pratique : Préférer le CSS aux Images - Utiliser le code pour les éléments d'interface">
+    <meta name="keywords" content="écoconception, CSS, images, performance, requêtes HTTP, optimisation">
+    <meta name="author" content="Formation Écoconception">
+    <title>CSS vs Images - Bonnes Pratiques Écoconception</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="../guide-pratique/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../guide-pratique/1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="../guide-pratique/2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="../guide-pratique/3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="../guide-pratique/4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="css-vs-images.html" aria-current="page">CSS vs Images</a></li>
+                            <li><a href="limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction à la Pratique -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Bonne Pratique : Préférer le CSS aux Images</h1>
+                <p class="hero-subtitle">Utiliser le code pour les éléments d'interface</p>
+                <p>La meilleure image est souvent celle que l'on ne charge pas. Pour de nombreux éléments d'interface (boutons, arrière-plans, ombres, formes), le code CSS est une alternative beaucoup plus légère et performante que l'utilisation d'un fichier image.</p>
+                <a href="#pourquoi" class="cta-button">Voir l'impact chiffré</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Pourquoi ? L'Impact -->
+        <section id="pourquoi" class="stats-section" aria-labelledby="impact-title">
+            <div class="container">
+                <h2 id="impact-title">Pourquoi ? Moins de Poids, Moins de Requêtes</h2>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">L'impact sur la performance est double : le code CSS est non seulement plus léger à télécharger, mais il réduit aussi le nombre de requêtes au serveur.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">15.2<span class="stat-unit">Ko</span></div>
+                        <p class="stat-label">Exemple : Une image au format JPG utilisée pour un bouton</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">&lt; 0.5<span class="stat-unit">Ko</span></div>
+                        <p class="stat-label">Le même bouton recréé en CSS (non compressé)</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0<span class="stat-unit">Requête</span></div>
+                        <p class="stat-label">Le CSS est dans la feuille de style unique, évitant une requête HTTP supplémentaire par image</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Comment ? La Mise en Œuvre -->
+        <section id="mise-en-oeuvre" class="objectives" aria-labelledby="implementation-title">
+            <div class="container">
+                <h2 id="implementation-title">Comment Mettre en Œuvre ?</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🎨</div>
+                        <h3>1. Maximiser le CSS</h3>
+                        <p>En tant que développeur et intégrateur, l'objectif est de maximiser l'utilisation de propriétés CSS à la place d'utiliser des images pour les éléments d'interface.</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">✅</div>
+                        <h3>2. Cas d'usage</h3>
+                        <p>Utilisez le CSS pour :</p>
+                        <ul>
+                            <li>Les arrière-plans de couleur (<code>background-color</code>)</li>
+                            <li>Les dégradés (<code>linear-gradient</code>)</li>
+                            <li>Les coins arrondis (<code>border-radius</code>)</li>
+                            <li>Les ombres portées (<code>box-shadow</code>)</li>
+                            <li>Les séparateurs (<code>border-bottom</code>)</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">⚡</div>
+                        <h3>3. Les Bénéfices</h3>
+                        <p>Le poids d'une feuille de styles est bien plus faible qu'une image.</p>
+                        <p>L'appel d'une feuille de style ne génère qu'une seule requête HTTP.</p>
+                        <p>Moins de poids et de requêtes signifie une empreinte allégée et un affichage plus rapide.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Exemples -->
+        <section id="exemples" class="navigation-section" aria-labelledby="exemples-title">
+            <div class="container">
+                <h2 id="exemples-title">Exemples de Sites Sobres</h2>
+                
+                <div class="test-content">
+                    <h3>Proposer des produits web avec moins d'images</h3>
+                    <p>De nombreux sites de service public à travers le monde adoptent cette approche. Ils privilégient la fonctionnalité et la rapidité en limitant les images d'interface au strict minimum.</p>
+                    <p>Des sites comme <strong>gov.uk</strong> (Royaume-Uni), <strong>service-public.fr</strong> (France), ou <strong>gov.pl</strong> (Pologne) sont d'excellentes références en matière de conception sobre et efficace.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Pratique Suivante</h2>
+                    <p>Passons à un composant lourd et souvent problématique : les carrousels automatiques. Apprenons pourquoi et comment les limiter.</p>
+                    <div class="cta-buttons">
+                        <a href="limiter-carrousels.html" class="btn-primary">Aller à la fiche : Limiter les Carrousels</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="../guide-pratique/index.html">Guide Pratique</a></li>
+                        <li><a href="index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

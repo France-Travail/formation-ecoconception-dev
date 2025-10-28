@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Module 3.2 : Les Outils de Diagnostic - Maîtriser GreenIT Analysis, Lighthouse et la Console Développeur">
+    <meta name="keywords" content="écoconception, outils, diagnostic, GreenIT Analysis, Lighthouse, audit, console développeur">
+    <meta name="author" content="Formation Écoconception">
+    <title>Module 3.2 : Les Outils de Diagnostic - Écoconception des Services Numériques</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <a href="../index.html" class="logo-link" title="Retour à l'accueil">
+                    <img src="../assets/images/logo.svg" alt="Écoconception des Services Numériques - Accueil" class="logo" width="200" height="40">
+                    <span class="logo-text">Écoconception des Services Numériques</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../fondamentaux.html" class="nav-link">Fondamentaux</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-processus">
+                            Processus & Rôles
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-processus" aria-label="Sous-menu Processus & Rôles">
+                            <li><a href="../processus/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../processus/cycle-de-vie.html">Cycle de vie</a></li>
+                            <li><a href="../processus/roles-equipe.html">Rôles de l'équipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-guide">
+                            Guide Pratique
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-guide" aria-label="Sous-menu Guide Pratique">
+                            <li><a href="index.html">Vue d'ensemble</a></li>
+                            <li><a href="1-cadrage-maturite.html">1. Cadrage & Maturité</a></li>
+                            <li><a href="2-outils-diagnostic.html">2. Outils de Diagnostic</a></li>
+                            <li><a href="3-audit-technique.html">3. Audit Technique</a></li>
+                            <li><a href="4-suivi-amelioration.html">4. Suivi & Amélioration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="menu-bonnes-pratiques">
+                            Bonnes Pratiques
+                            <span class="dropdown-arrow" aria-hidden="true">▼</span>
+                        </button>
+                        <ul class="dropdown-menu" id="menu-bonnes-pratiques" aria-label="Sous-menu Bonnes Pratiques">
+                            <li><a href="../bonnes-pratiques/index.html">Vue d'ensemble</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-images.html">Optimiser les images</a></li>
+                            <li><a href="../bonnes-pratiques/css-vs-images.html">CSS vs Images</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-carrousels.html">Limiter les carrousels</a></li>
+                            <li><a href="../bonnes-pratiques/lazy-loading.html">Lazy Loading</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-polices.html">Optimiser les polices</a></li>
+                            <li><a href="../bonnes-pratiques/protocole-http.html">Protocole HTTP</a></li>
+                            <li><a href="../bonnes-pratiques/optimiser-code.html">Optimiser le code</a></li>
+                            <li><a href="../bonnes-pratiques/maitriser-dom.html">Maîtriser le DOM</a></li>
+                            <li><a href="../bonnes-pratiques/limiter-animations.html">Limiter les animations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../ressources.html" class="nav-link">Ressources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Section 1 : Hero / Introduction aux Outils -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Module 3.2 : Les Outils de Diagnostic</h1>
+                <p class="hero-subtitle">Maîtriser les outils pour un audit efficace et objectif</p>
+                <p>Pour auditer un service, vous avez besoin des bons outils. Cette section présente les trois outils essentiels pour analyser une page web : GreenIT Analysis (pour l'éco-score), Lighthouse (pour la performance) et la Console Développeur (pour l'analyse réseau).</p>
+                <a href="#outil-greenit" class="cta-button">Découvrir GreenIT Analysis</a>
+            </div>
+        </section>
+
+        <!-- Section 2 : Focus sur GreenIT Analysis -->
+        <section id="outil-greenit" class="navigation-section" aria-labelledby="greenit-title">
+            <div class="container">
+                <h2 id="greenit-title">Outil 1 : GreenIT Analysis</h2>
+                
+                <div class="tool-content">
+                    <article class="tool-description">
+                        <h3>Qu'est-ce que c'est ?</h3>
+                        <p>Green IT Analysis est une extension de navigateur (disponible pour Chrome et Firefox) qui permet d'avoir une première approche des impacts environnementaux liés à la consultation d'une page web.</p>
+                    </article>
+
+                    <article class="tool-metrics">
+                        <h3>Que mesure-t-il ?</h3>
+                        <p>L'outil fournit plusieurs indicateurs clés :</p>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-icon" aria-hidden="true">🏆</div>
+                                <h4>L'écoindex (A à G)</h4>
+                                <p>Un score global évaluant le niveau d'écoconception de la page, allant de A (excellent) à G (médiocre).</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon" aria-hidden="true">📊</div>
+                                <h4>Indicateurs techniques</h4>
+                                <p>Le nombre d'éléments du DOM, le poids total de la page et le nombre de requêtes HTTP.</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon" aria-hidden="true">🌍</div>
+                                <h4>Impacts environnementaux</h4>
+                                <p>Une estimation des émissions de Gaz à Effet de Serre (en g CO2 eq) et de la consommation d'eau.</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon" aria-hidden="true">✅</div>
+                                <h4>Bonnes pratiques</h4>
+                                <p>Le nombre de bonnes pratiques "macro" respectées par la page analysée.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                   <article class="tool-usage">
+                        <h3>Comment l'utiliser ?</h3>
+                        <ol style="padding-left: 40px;"> <li><strong>Installation :</strong>        Se rendre sur le store de votre navigateur (Chrome Webstore ou Firefox Add-ons) et ajouter l'extension GreenIT Analysis.</li>
+                            <li><strong>Lancement :</strong>        Aller sur la page à analyser, ouvrir les outils de développement (F12), et cliquer sur l'onglet "GreenIT".</li>
+                            <li><strong>Analyse :</strong>        Cocher la case « Activer l'analyse des bonnes pratiques » et cliquer sur le bouton "Lancer l'analyse".</li>
+                            <li><strong>Astuce :</strong>        Pour s'assurer que le cache ne fausse pas la mesure, il est conseillé de réaliser l'analyse en navigation privée.</li>
+                        </ol>
+                    </article>
+
+                    <article class="tool-targets">
+                        <h3>Quels objectifs viser ?</h3>
+                        <p>Pour être considéré comme sobre, nous préconisons de viser les critères suivants :</p>
+                        <div class="targets-grid">
+                            <div class="target-card">
+                                <div class="target-value">< 40</div>
+                                <div class="target-label">Requêtes HTTP</div>
+                            </div>
+                            <div class="target-card">
+                                <div class="target-value">< 2 MO</div>
+                                <div class="target-label">Taille de la page (2000 KO)</div>
+                            </div>
+                            <div class="target-card">
+                                <div class="target-value">< 500</div>
+                                <div class="target-label">Éléments du DOM</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Focus sur Lighthouse -->
+        <section id="outil-lighthouse" class="objectives" aria-labelledby="lighthouse-title">
+            <div class="container">
+                <h2 id="lighthouse-title">Outil 2 : Lighthouse</h2>
+                
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">💡</div>
+                        <h3>Un complément indispensable</h3>
+                        <p>Lighthouse est un outil (généralement intégré à l'onglet "Audit" ou "Lighthouse" des outils F12) qui sert d'excellent complément à Green IT Analysis.</p>
+                        <p style="margin-top: 1rem;">Il se concentre sur la <strong>Performance</strong>, l'<strong>Accessibilité</strong>, les <strong>Bonnes Pratiques</strong> et le <strong>SEO</strong>. Ses recommandations sont très utiles pour identifier des pistes d'optimisation (ex: "réduire le JavaScript inutilisé", "différer les images hors écran").</p>
+                    </article>
+                    
+                    <article class="objective-card">
+                        <div class="card-icon" aria-hidden="true">🎯</div>
+                        <h3>Scores et recommandations</h3>
+                        <p>Lighthouse attribue des scores (0 à 100) pour chaque catégorie et fournit des recommandations détaillées pour améliorer chaque aspect de votre page.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Performance : temps de chargement, interactivité</li>
+                            <li>Accessibilité : conformité WCAG</li>
+                            <li>Bonnes pratiques : sécurité, standards web</li>
+                            <li>SEO : optimisation pour les moteurs de recherche</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : Focus sur Console Développeur -->
+        <section id="outil-console" class="navigation-section" aria-labelledby="console-title">
+            <div class="container">
+                <h2 id="console-title">Outil 3 : La Console Développeur (Onglet Réseau)</h2>
+                
+                <div class="tool-content">
+                    <article class="tool-description">
+                        <h3>Approfondir l'analyse (Front/Back)</h3>
+                        <p>Pour une analyse plus fine des métriques, l'onglet "Réseau" (ou "Network") de la console (F12) est indispensable. Il permet d'identifier précisément ce qui 'pèse lourd' dans votre page.</p>
+                    </article>
+
+                    <article class="tool-network-details">
+                        <h3>Que regarder dans l'onglet Réseau ?</h3>
+                        <p>L'objectif est d'avoir le détail de tous les éléments chargés par la page. Vous devez y surveiller :</p>
+                        
+                        <div class="network-items">
+                            <div class="network-item">
+                                <div class="network-icon" aria-hidden="true">📈</div>
+                                <div class="network-content">
+                                    <h4>Le nombre total de requêtes</h4>
+                                    <p>Chaque requête HTTP a un coût. Moins il y en a, mieux c'est pour la performance et l'environnement.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="network-item">
+                                <div class="network-icon" aria-hidden="true">⚖️</div>
+                                <div class="network-content">
+                                    <h4>Le poids total transféré</h4>
+                                    <p>La somme de tous les octets téléchargés. Un poids élevé signifie plus de données transférées et plus d'énergie consommée.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="network-item">
+                                <div class="network-icon" aria-hidden="true">🔍</div>
+                                <div class="network-content">
+                                    <h4>Les filtres par type (JS, CSS, Img, Polices...)</h4>
+                                    <p>Ils permettent d'identifier quelle catégorie de ressources contribue le plus au poids de la page et au nombre de requêtes. C'est essentiel pour prioriser les optimisations.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="network-item">
+                                <div class="network-icon" aria-hidden="true">📊</div>
+                                <div class="network-content">
+                                    <h4>La cascade (Waterfall)</h4>
+                                    <p>Elle montre l'ordre de chargement et les ressources qui pourraient bloquer l'affichage. Identifiez les goulots d'étranglement et les dépendances inutiles.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="network-conclusion">C'est en analysant ces données que vous pourrez remplir un tableau d'audit pour suivre les gains (voir étape suivante).</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 : Récapitulatif des 3 outils -->
+        <section class="stats-section" aria-labelledby="recap-title">
+            <div class="container">
+                <h2 id="recap-title">Récapitulatif : Vos 3 outils essentiels</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">🌱</div>
+                        <h3 class="stat-label">GreenIT Analysis</h3>
+                        <p>Écoindex, impacts environnementaux et bonnes pratiques macro pour un premier diagnostic rapide.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">💡</div>
+                        <h3 class="stat-label">Lighthouse</h3>
+                        <p>Performance, accessibilité, bonnes pratiques et SEO avec des recommandations détaillées.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" aria-hidden="true">🔬</div>
+                        <h3 class="stat-label">Console Réseau</h3>
+                        <p>Analyse fine des requêtes, du poids par type de ressource et de la cascade de chargement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 : Appel à l'action final -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Prêt à réaliser votre premier audit ?</h2>
+                    <p>Maintenant que vous connaissez les outils, apprenons à les utiliser concrètement pour réaliser un audit complet, analyser les résultats et prioriser les actions de correction.</p>
+                    <div class="cta-buttons">
+                        <a href="3-audit-technique.html" class="btn-primary">Aller au Module 3.3 : Réaliser l'Audit Technique</a>
+                        <a href="index.html" class="btn-secondary">Retour au Guide Pratique</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Cette formation sur l'écoconception des services numériques vise à sensibiliser les professionnels du développement et des tests aux enjeux environnementaux du numérique et à leur fournir des outils concrets pour agir.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <nav aria-label="Navigation rapide">
+                    <ul>
+                        <li><a href="../fondamentaux.html">Les Fondamentaux</a></li>
+                        <li><a href="../processus/index.html">Processus & Rôles</a></li>
+                        <li><a href="index.html">Guide Pratique</a></li>
+                        <li><a href="../bonnes-pratiques/index.html">Bonnes Pratiques</a></li>
+                        <li><a href="../ressources.html">Ressources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Ressources complémentaires</h3>
+                <nav aria-label="Liens ressources">
+                    <ul>
+                        <li><a href="../ressources.html">Toutes les ressources</a></li>
+                        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" rel="external noopener noreferrer">RGESN <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="https://www.greenit.fr/" rel="external noopener noreferrer">GreenIT.fr <span class="visually-hidden">(nouvelle fenêtre)</span></a></li>
+                        <li><a href="../checklist-ecoconception.html">Checklist écoconception</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 - Écoconception des Services Numériques - Formation professionnelle</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
