@@ -65,4 +65,4 @@ Les contributions sont les bienvenues ! Si vous trouvez des coquilles, des erreu
 
 ## Licence
 
-Ce projet est publié sous licence [MIT](LICENSE) (ou une autre licence de votre choix, ex: Apache 2.0).
+Ce projet est publié sous licence [MIT](LICENSE)
