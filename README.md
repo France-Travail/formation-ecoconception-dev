@@ -2,6 +2,9 @@
 
 Ce dépôt contient une formation complète à l'écoconception destinée aux équipes techniques. Elle prend la forme d'un site web statique (HTML/CSS/JS) qui peut être consulté localement ou hébergé très simplement.
 
+
+Il est complémentaire au Référentiel d'écoconception, également disponible sur github <https://github.com/France-Travail/referentiel-ecoconception>, ainsi qu'au kit de sensibilisation à la conception écoresponsable <https://github.com/France-Travail/sensibilisation-conception-responsable>, aux formations à l'écoconception destinées aux équipes techniques <https://github.com/France-Travail/formation-ecoconception-dev/>, aux équipes produit, et au au starterkit d'écoconception pour se lancer dans la démarche <https://github.com/France-Travail/starter-kit-ecoconception>.
+
 Cette formation a pour but d'aider les développeurs, testeurs, architectes et chefs de projet à comprendre les impacts du numérique et à acquérir les compétences pratiques pour auditer, concevoir et optimiser des services numériques plus sobres et performants.
 
 ## Pour qui ?
@@ -55,7 +58,7 @@ Il s'agit d'un site web statique. Aucune installation de serveur n'est requise.
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Si vous trouvez des coquilles, des erreurs, ou si vous souhaitez ajouter une nouvelle fiche de bonne pratique, n'hésitez pas à nos contacter @ <oss.00619@francetravail.fr> et/ou:
+Les contributions sont les bienvenues ! Si vous trouvez des coquilles, des erreurs, ou si vous souhaitez ajouter une nouvelle fiche de bonne pratique, n'hésitez pas à nous contacter @ <oss.00619@francetravail.fr> et/ou:
 
 1.  Forkez le dépôt.
 2.  Créez une branche pour votre modification (`git checkout -b feature/ma-nouvelle-fiche`).
