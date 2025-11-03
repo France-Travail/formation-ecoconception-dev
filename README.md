@@ -1,6 +1,6 @@
 # Formation à l'Écoconception des Services Numériques
 
-Ce dépôt contient une formation complète à l'écoconception destinée aux équipes techniques. Elle prend la forme d'un site web statique (HTML/CSS/JS) qui peut être consulté localement ou hébergé très simplement (par exemple, via GitHub Pages).
+Ce dépôt contient une formation complète à l'écoconception destinée aux équipes techniques. Elle prend la forme d'un site web statique (HTML/CSS/JS) qui peut être consulté localement ou hébergé très simplement.
 
 Cette formation a pour but d'aider les développeurs, testeurs, architectes et chefs de projet à comprendre les impacts du numérique et à acquérir les compétences pratiques pour auditer, concevoir et optimiser des services numériques plus sobres et performants.
 
@@ -23,7 +23,7 @@ La formation est divisée en 4 modules, complétés par des outils pratiques :
 2.  **Module 2 : Processus & Rôles**
     * Le "Qui" et le "Quand" : Vue d'ensemble du cycle de vie et de l'implication des équipes.
 3.  **Module 3 : Le Guide Pratique**
-    * Le "Comment" : Présentation de la démarche d'audit (de 1 à 6) et des outils de diagnostic (GreenIT Analysis, Lighthouse...).
+    * Le "Comment" : Présentation de la démarche d'audit et des outils de diagnostic (GreenIT Analysis, Lighthouse...).
 4.  **Module 4 : Les Bonnes Pratiques**
     * Le "Quoi" : Un catalogue de fiches techniques (optimisation d'images, CSS, JS, DOM, protocoles, etc.).
 5.  **Checklist d'Écoconception**
@@ -55,7 +55,7 @@ Il s'agit d'un site web statique. Aucune installation de serveur n'est requise.
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Si vous trouvez des coquilles, des erreurs, ou si vous souhaitez ajouter une nouvelle fiche de bonne pratique :
+Les contributions sont les bienvenues ! Si vous trouvez des coquilles, des erreurs, ou si vous souhaitez ajouter une nouvelle fiche de bonne pratique, n'hésitez pas à nos contacter @ <oss.00619@francetravail.fr> et/ou:
 
 1.  Forkez le dépôt.
 2.  Créez une branche pour votre modification (`git checkout -b feature/ma-nouvelle-fiche`).
